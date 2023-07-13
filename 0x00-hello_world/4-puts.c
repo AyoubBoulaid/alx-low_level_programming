@@ -1,10 +1,12 @@
 #include<stdio.h>
 /**
-*main - Entry point of the program
-*return The status code indicating the success or failure of the program
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
+
