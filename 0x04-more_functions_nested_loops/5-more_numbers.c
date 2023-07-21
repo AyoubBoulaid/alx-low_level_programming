@@ -7,7 +7,7 @@
  */
 void more_numbers(void)
 {
-	int r,n; /* r=repition and n=numbers */
+	int r, n; /* r=repition and n=numbers */
 
 	for (r = 0; r <= 10; r++)
 	{
