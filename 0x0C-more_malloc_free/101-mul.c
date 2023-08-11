@@ -5,8 +5,8 @@
 #define ERR_MSG "Error"
 
 /**
- * is_digit - Checks if a string contains a non-digit char
- * @s: String to be evaluated
+ * is_digit - checks if a string contains a non-digit char
+ * @s: string to be evaluated
  *
  * Return: 0 if a non-digit is found, 1 otherwise
  */
@@ -24,12 +24,11 @@ int is_digit(char *s)
 }
 
 /**
- * _strlen - Returns the length of a string
- * @s: String to evaluate
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
  *
- * Return: The length of the string
+ * Return: the length of the string
  */
-
 int _strlen(char *s)
 {
 	int i = 0;
@@ -42,25 +41,21 @@ int _strlen(char *s)
 }
 
 /**
- * errors - Handles errors for main
+ * errors - handles errors for main
  */
-
 void errors(void)
 {
-	for (int i = 0; ERR_MSG[i]; i++)
-		_putchar(ERR_MSG[i]);
-	_putchar('\n');
+	printf("Error\n");
 	exit(98);
 }
 
 /**
- * main - Multiplies two positive numbers
- * @argc: Number of arguments
- * @argv: Array of arguments
+ * main - multiplies two positive numbers
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: Always 0 (Success)
+ * Return: always 0 (Success)
  */
-
 int main(int argc, char *argv[])
 {
 	char *s1, *s2;
@@ -94,12 +89,12 @@ int main(int argc, char *argv[])
 	for (i = 0; i < len - 1; i++)
 	{
 		if (result[i])
-			_putchar(result[i] + '0');
-		else if (a || i == len - 2)
-			_putchar('0');
-		if (result[i])
 			a = 1;
+		if (a)
+			_putchar(result[i] + '0');
 	}
+	if (!a)
+		_putchar('0');
 	_putchar('\n');
 	free(result);
 	return (0);
