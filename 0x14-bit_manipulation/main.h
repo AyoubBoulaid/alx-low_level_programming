@@ -1,5 +1,7 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
+#ifndef NULL
+#define NULL ((void *)0)
 
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
